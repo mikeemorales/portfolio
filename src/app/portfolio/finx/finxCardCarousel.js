@@ -5,6 +5,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import { Container, Typography} from "@mui/material";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import Image from "next/image";
 
 const itemData = [
     {
@@ -63,11 +64,14 @@ const FinxImageCarousel = () => {
                 <ImageList variant="masonry" cols={3} gap={8}>
                     {itemData.map((item, index) => (
                         <ImageListItem key={item.img} onClick={() => openLightbox(index)}>
-                            <img
+                            <Image
                                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                                 src={`${item.img}?w=248&fit=crop&auto=format`}
                                 alt={item.title}
                                 loading="lazy"
+                                width={250}
+                                height={450}
+                                layout='responsive'
                             />
                         </ImageListItem>
                     ))}
