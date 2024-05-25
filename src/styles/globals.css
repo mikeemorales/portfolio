@@ -88,10 +88,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
+  color: #FFFFFF;
 }
 
 a {
@@ -110,7 +107,7 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .gradient-text-2 {
@@ -118,7 +115,7 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 ::-webkit-scrollbar {

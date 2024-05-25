@@ -5,28 +5,27 @@ import ImageListItem from '@mui/material/ImageListItem';
 import {Box, Container, Typography} from "@mui/material";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import Image from "next/image";
 
 const itemData = [
     {
         img: '/img/voxx-ui-2.png',
-        title: 'FinX Hero and Nav',
+        title: 'voxx full',
     },
     {
         img: '/img/voxx-figma.png',
-        title: 'FinX section 1',
+        title: 'figma component',
     },
     {
         img: '/img/voxx-ui-1.png',
-        title: 'FinX section 2',
+        title: 'figma messages',
     },
     {
         img: '/img/voxx-trifold.png',
-        title: 'FinX location map'
+        title: 'trifold'
     },
     {
         img: '/img/voxx-folder.png',
-        title: 'Finx footer',
+        title: 'marketing folder',
     },
 ];
 
@@ -57,14 +56,12 @@ const VoxxCarousel = () => {
                 <ImageList variant="masonry" cols={3} gap={8}>
                     {itemData.map((item, index) => (
                         <ImageListItem key={item.img} onClick={() => openLightbox(index)}>
-                            <Image
-                                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                                src={`${item.img}?w=248&fit=crop&auto=format`}
+                            <img
+                                src={item.img}
                                 alt={item.title}
                                 loading="lazy"
-                                width={250}
-                                height={450}
-                                layout='responsive'
+                                width={25}
+                                height={25}
                             />
                         </ImageListItem>
                     ))}

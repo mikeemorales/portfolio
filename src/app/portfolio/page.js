@@ -7,9 +7,10 @@ import FinxStyleGuide from "@/app/portfolio/finx/finxStyleGuide";
 import VoxxCarousel from "@/app/portfolio/voxx/VoxxCarousel";
 import MediantRxCarousel from "@/app/portfolio/mediantrx/MediantRxCarousel";
 import FinxWebSocketComponent from "@/app/portfolio/finx/finxWebSocketComponent";
+import HoppitBrewingCarousel from "./hoppit/HoppitBrewingCarousel";
 
 export default function Portfolio() {
-    const sectionIDs = ['finxCarousel', 'finxStyleGuide', 'finxWebSockeet', 'voxxCarousel', 'mediantRxCarousel'];
+    const sectionIDs = ['finxCarousel', 'finxStyleGuide', 'voxxCarousel', 'hoppitBrewingCarousel', 'mediantRxCarousel'];
     const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
 
     return (
@@ -17,8 +18,8 @@ export default function Portfolio() {
             <Container maxWidth='true'>
                 <FinxImageCarousel/>
                 <FinxStyleGuide/>
-                <FinxWebSocketComponent/>
                 <VoxxCarousel/>
+                <HoppitBrewingCarousel/>
                 <MediantRxCarousel/>
             </Container>
             <BottomNav sectionIDs={sectionIDs} currentSectionIndex={currentSectionIndex} setCurrentSectionIndex={setCurrentSectionIndex} />

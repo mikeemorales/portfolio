@@ -2,10 +2,9 @@
 import React, { useState } from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { Container, Typography} from "@mui/material";
+import {Container, Typography} from "@mui/material";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import Image from "next/image";
 
 const itemData = [
     {
@@ -36,6 +35,10 @@ const itemData = [
         img: '/img/finx-footer.png',
         title: 'Finx footer',
     },
+    {
+        img: '/img/finx-js-websocket.gif',
+        title: 'javascript websocket',
+    },
 ];
 
 const FinxImageCarousel = () => {
@@ -56,22 +59,21 @@ const FinxImageCarousel = () => {
                 <Typography variant='h5' sx={{ mb: 1 }}>
                     FinX Web Site
                 </Typography>
+                <Typography variant='caption' sx={{ mb: 1 }}>
+                    <a href='https://www.finx.io/' target="_blank">www.finx.io</a>
+                </Typography>
                 <Typography sx={{ mb: 2 }}>
-                    The corporate website of FinX Capital Markets that I developed. Working alongside my project manager, we
-                    {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    we're able to build a a greater user experience, while adhering to SOC2 compliance.
+                    The corporate website of FinX Capital Markets that I developed. Working alongside my project manager, we managed to build a website with greater user experience, while adhering to SOC2 compliance.
                 </Typography>
                 <ImageList variant="masonry" cols={3} gap={8}>
                     {itemData.map((item, index) => (
                         <ImageListItem key={item.img} onClick={() => openLightbox(index)}>
-                            <Image
-                                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                                src={`${item.img}?w=248&fit=crop&auto=format`}
+                            <img
+                                src={item.img}
                                 alt={item.title}
                                 loading="lazy"
-                                width={250}
-                                height={450}
-                                layout='responsive'
+                                width={25}
+                                height={25}
                             />
                         </ImageListItem>
                     ))}

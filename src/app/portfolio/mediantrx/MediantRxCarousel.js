@@ -5,20 +5,19 @@ import ImageListItem from '@mui/material/ImageListItem';
 import {Box, Container, Typography} from "@mui/material";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import Image from "next/image";
 
 const itemData = [
     {
         img: '/img/mediantrx-landing.png',
-        title: 'FinX Hero and Nav',
+        title: 'Mediant RX home and nav',
     },
     {
         img: '/img/mediantrx-product.png',
-        title: 'FinX section 1',
+        title: 'purifier product',
     },
     {
         img: '/img/mediantrx-faq.png',
-        title: 'FinX section 1',
+        title: 'faq section',
     },
 ];
 
@@ -41,6 +40,9 @@ const MediantRxCarousel = () => {
                 <Typography variant='h5' sx={{ mb: 1 }}>
                     Mediant RX
                 </Typography>
+                <Typography variant='caption' sx={{ mb: 1 }}>
+                    <a href='https://www.mediantrx.com/' target="_blank">www.mediantrx.com</a>
+                </Typography>
                 <Typography sx={{ mb: 2 }}>
                     The corporate site I developed for Mediant RX, an ActivePure Technology-powered air purifier. ActivePure
                     Technology is proven to neutralize pathogens, including the virus that causes COVID-19, on surfaces
@@ -49,14 +51,12 @@ const MediantRxCarousel = () => {
                 <ImageList variant="standard" cols={3} gap={8}>
                     {itemData.map((item, index) => (
                         <ImageListItem key={item.img} onClick={() => openLightbox(index)}>
-                            <Image
-                                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                                src={`${item.img}?w=248&fit=crop&auto=format`}
+                            <img
+                                src={item.img}
                                 alt={item.title}
                                 loading="lazy"
-                                width={250}
-                                height={450}
-                                layout='responsive'
+                                width={25}
+                                height={25}
                             />
                         </ImageListItem>
                     ))}

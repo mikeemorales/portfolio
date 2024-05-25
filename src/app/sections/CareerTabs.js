@@ -91,7 +91,7 @@ const CareerTabs = () => {
     return (
         <Container sx={{ height: 450, backgroundColor: 'rgba(255,255,255,0)'}}>
             <Box>
-                <Tabs variant={isMobile ? 'scrollable' : 'standard'} scrollButtons={isMobile ? 'auto' : 'none'} value={value} onChange={handleChange} aria-label="Career Tabs" centered>
+                <Tabs variant={isMobile ? 'scrollable' : 'standard'} scrollButtons={isMobile ? 'auto' : 'none'} value={value} onChange={handleChange} aria-label="Career Tabs">
                     <Tab label="FinX Capital Markets" {...a11yProps(0)} sx={{ color: 'white', borderBottom: 'none' }} />
                     <Tab label="Champions Round" {...a11yProps(1)} sx={{ color: 'white', borderBottom: 'none' }} />
                     <Tab label="Voxx Analytics" {...a11yProps(2)} sx={{ color: 'white', borderBottom: 'none' }} />
