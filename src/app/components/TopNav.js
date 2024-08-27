@@ -13,6 +13,10 @@ const pageInfo = [
         href: '/portfolio'
     },
     {
+        title: 'Design',
+        href: '/design'
+    },
+    {
         title: 'About',
         href: '/about'
     },
